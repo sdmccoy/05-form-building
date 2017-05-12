@@ -77,12 +77,16 @@
                    6. Some way to know if this article is a draft or is published -->
       </section>
 
-      <section id="articles-new" class="tab-content">
+      <section id="articles" class="tab-content">
         <!-- NOTE: This is where we will display our article preview -->
       </section>
 
       <section id="article-export">
         <!-- TODO: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable to allow easy selection of the text it holds. What kind of element could we use for this? -->
+        <label id="export-field" class="pull-right" for="">
+          <input type="text" id="article-json" name="" value="" readonly>
+          When your article is ready, copy the above JSON and paste it into your blogArticles.js
+        </label>
       </section>
 
     </main>
@@ -101,6 +105,7 @@
       // (Look at the bottom of index.html as a reference. Since we are now using our JS on two different HTML pages that have different needs as to what parts of the code they utilize, we need to build a function that inializes each page.)
       //  Hint: Look in articleView.js for a function that does this.
       articleView.initNewArticlePage();
+      articleView.create();
     </script>
   </body>
 </html>
